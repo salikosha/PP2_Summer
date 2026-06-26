@@ -1,0 +1,10 @@
+#Write a Python program to convert a given camel case string to snake case.
+
+import re
+
+txt = str(input())
+x = re.findall('[A-Z][^A-Z]*', txt)
+x = ' '.join(x)
+x = x.lower()
+x = re.sub("\s", "_", x)
+print(x)
